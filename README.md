@@ -95,7 +95,7 @@ Logical reads went from 1037 to 12, which is about 99% less. The elapsed time di
 
 **Execution plan after index**
 
-![After]((https://www.image2url.com/r2/default/images/1793296675595-e7654c4a-5292-4708-99bc-5a67d9ecdbf4.jpg))
+![After](https://www.image2url.com/r2/default/images/1793296675595-e7654c4a-5292-4708-99bc-5a67d9ecdbf4.jpg)
 
 **What I learned:** without an index SQL Server has to read the whole table to find one artist's rows. With the index on `artist` it can jump straight to those rows, so the reads go down a lot. The table has no clustered index, so SQL Server also does a RID Lookup on the heap to get the remaining columns for those few rows.
 
