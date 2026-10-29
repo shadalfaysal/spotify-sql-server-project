@@ -91,7 +91,7 @@ Logical reads went from 1037 to 12, which is about 99% less. The elapsed time di
 
 **Execution plan before index**
 
-![Before](H:\DATA\project\Sopify Data\clude ai\images/execution_plan_before_index.jpg)
+![Before](https://www.image2url.com/r2/default/images/1793296787228-7f348df8-e294-4845-a215-adfcdc7e5482.jpg)
 
 **Execution plan after index**
 
