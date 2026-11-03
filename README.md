@@ -1,4 +1,5 @@
 # Spotify Data Analysis with SQL Server
+![Spotify Logo](image/spotify_logo.jpg)
 
 A SQL project on a Spotify + YouTube tracks dataset (20,594 rows). I practiced easy, medium and advanced queries, and then tested how an index changes query performance.
 
