@@ -1,7 +1,5 @@
 # Spotify Data Analysis with SQL Server
 
-![Spotify Logo](https://www.image2url.com/r2/default/images/1793296297276-67bb797f-219b-4097-83a7-a1048bdce777.jpg)
-
 A SQL project on a Spotify + YouTube tracks dataset (20,594 rows). I practiced easy, medium and advanced queries, and then tested how an index changes query performance.
 
 The project idea and the practice questions are from my instructor's PostgreSQL version. I redid the whole thing in **SQL Server (SSMS)**, so the syntax is different in some places (see the table below).
@@ -22,7 +20,7 @@ Spotify_SQL_Project/
 │   ├── 02_medium_queries.sql
 │   ├── 03_advanced_queries.sql
 │   └── 04_query_optimization.sql
-├── images/
+├── image/
 └── README.md
 ```
 
@@ -91,11 +89,11 @@ Logical reads went from 1037 to 12, which is about 99% less. The elapsed time di
 
 **Execution plan before index**
 
-![Before](https://www.image2url.com/r2/default/images/1793296787228-7f348df8-e294-4845-a215-adfcdc7e5482.jpg)
+![Before](image/execution_plan_before_index.jpg)
 
 **Execution plan after index**
 
-![After](https://www.image2url.com/r2/default/images/1793296675595-e7654c4a-5292-4708-99bc-5a67d9ecdbf4.jpg)
+![After](image/execution_plan_after_index.jpg)
 
 **What I learned:** without an index SQL Server has to read the whole table to find one artist's rows. With the index on `artist` it can jump straight to those rows, so the reads go down a lot. The table has no clustered index, so SQL Server also does a RID Lookup on the heap to get the remaining columns for those few rows.
 
